@@ -466,3 +466,48 @@ section h2{
     }
 
 }
+
+
+.coupon-box{
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+.coupon-box label{
+    display:block;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.coupon-container{
+    display:flex;
+    gap:10px;
+}
+
+.coupon-container input{
+    flex:1;
+    padding:16px;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+    outline:none;
+}
+
+.coupon-container button{
+    padding:16px 22px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    font-weight:600;
+    color:white;
+    background:linear-gradient(
+        135deg,
+        #ff7b00,
+        #ff2d55
+    );
+}
+
+#couponMessage{
+    margin-top:10px;
+    font-size:14px;
+    font-weight:600;
+}
