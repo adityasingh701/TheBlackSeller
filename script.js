@@ -272,21 +272,22 @@ orderForm.addEventListener("submit", async function (e) {
         );
 
 
-        alert(
-`Order Submitted Successfully!
+        document.getElementById(
+    "successDetails"
+).innerHTML = `
+<b>Order ID:</b> ${formData.orderId}<br>
+<b>Platform:</b> ${platform}<br>
+<b>Quantity:</b> ${quantity} Wishes<br>
+<b>Wish Type:</b> ${wishType}<br>
+<b>Total Amount:</b> ${totalPrice}<br><br>
 
+Our team will contact you on
+WhatsApp shortly.
+`;
 
-Order ID: ${formData.orderId}
-
-
-Platform: ${platform}
-Quantity: ${quantity}
-Wish Type: ${wishType}
-Total: ${totalPrice}
-
-
-Our team will contact you on WhatsApp shortly.`
-        );
+document.getElementById(
+    "successModal"
+).style.display = "flex";
 
 
         orderForm.reset();
