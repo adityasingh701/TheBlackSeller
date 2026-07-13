@@ -364,35 +364,32 @@ section h2{
 =========================== */
 
 .success-modal{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.45);
+    position: fixed;
+    inset: 0;
 
-    display:none;
-    justify-content:center;
-    align-items:center;
+    display: none;
+    justify-content: center;
+    align-items: center;
 
-    z-index:99999;
+    padding: 40px 20px;
 
-    backdrop-filter:blur(8px);
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(8px);
+
+    z-index: 99999;
 }
 
 .success-card{
-    width:90%;
-    max-width:430px;
+    width: 100%;
+    max-width: 430px;
 
-    background:#f8f8fc;
+    max-height: calc(100vh - 80px);
 
-    border-radius:35px;
+    overflow-y: auto;
 
-    padding:45px 35px;
+    border-radius: 35px;
 
-    text-align:center;
-
-    animation:popupShow .35s ease;
+    margin: auto;
 }
 
 @keyframes popupShow{
