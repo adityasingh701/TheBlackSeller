@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reputation Growth</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            Reputation Growth
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#how">How It Works</a>
+            <a href="#order">Order</a>
+            <a href="contact.html"> Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+<div class="hero-logo">
+    <img src="logo.png" alt="Reputation Growth Logo">
+</div>
+            <span class="badge">
+                Premium Business Growth Solutions
+            </span>
+
+            <h1>
+                Order Premium Wishes For Your Business Profile
+            </h1>
+
+            <p>
+                Select your platform, choose your wish type,
+                view pricing instantly and submit your request
+                in just a few clicks.
+            </p>
+
+            <a href="#order" class="hero-btn">
+                Place Order
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how">
+
+        <h2>How It Works</h2>
+
+        <div class="steps">
+
+            <div class="step-card">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Select Platform</h3>
+                <p>Choose Google Maps or 5BestInCity.</p>
+            </div>
+
+            <div class="step-card">
+                <i class="fa-solid fa-pen"></i>
+                <h3>Fill Details</h3>
+                <p>Enter business details and preferences.</p>
+            </div>
+
+            <div class="step-card">
+                <i class="fa-solid fa-paper-plane"></i>
+                <h3>Submit Order</h3>
+                <p>We receive your request instantly in our server.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section" id="order">
+
+        <div class="form-card">
+
+            <h2>Place Your Order</h2>
+
+            <form id="orderForm">
+
+                <!-- Auto Order ID -->
+                <div class="input-group">
+                    <label>Order ID</label>
+                    <input type="text" id="orderId" readonly>
+                </div>
+
+                <!-- Name -->
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Whatsapp -->
+                <div class="input-group">
+                    <label>WhatsApp Number</label>
+                    <input type="tel"
+                           id="whatsapp"
+                           placeholder="9876543210"
+                           maxlength="10"
+                           required>
+                </div>
+
+                <!-- Platform -->
+                <div class="input-group">
+                    <label>Platform</label>
+
+                    <select id="platform" required>
+                        <option value="">Select Platform</option>
+                        <option value="map">Google Maps</option>
+                        <option value="5best">5BestInCity</option>
+                        <option value="justdial">Justdial</option>
+                    </select>
+                </div>
+
+                <!-- Business Link -->
+                <div class="input-group">
+                    <label>Business Profile Link</label>
+
+                    <input type="url"
+                           id="businessLink"
+                           placeholder="Paste Your Profile link"
+                           required>
+                </div>
+
+                <!-- Quantity -->
+                <div class="input-group">
+                    <label>Quantity</label>
+
+                    <select id="quantity">
+                        <option value="">Select Quantity</option>
+                        <option value="10">10 Wishes</option>
+                        <option value="20">20 Wishes</option>
+                        <option value="50">50 Wishes</option>
+                        <option value="custom">Custom Quantity</option>
+                    </select>
+                </div>
+
+                <!-- Custom Quantity -->
+                <div class="input-group hidden" id="customBox">
+                    <label>Custom Quantity</label>
+
+                    <input type="number"
+                           id="customQuantity"
+                           placeholder="Enter quantity">
+                </div>
+
+                <!-- Wish Type -->
+                <div class="input-group">
+                    <label>Wish Type</label>
+
+                    <select id="wishType">
+                        <option value="">Select Wish Type</option>
+                        <option value="1">2-3 Line </option>
+                        <option value="2">4-5 Line </option>
+                        
+                    </select>
+                </div>
+
+                <!-- Languages -->
+                <div class="input-group">
+                    <label>Preferred Language</label>
+
+                    <select id="language">
+                        <option>Hindi</option>
+                        <option>English</option>
+                        <option>Hinglish</option>
+                        <option>Bangla</option>
+                        <option>Mixed Languages</option>
+                    </select>
+                </div>
+
+                <!-- Extra Notes -->
+                <div class="input-group">
+                    <label>Additional Instructions</label>
+
+                    <textarea id="notes"
+                              placeholder="Any extra details..."></textarea>
+                </div>
+                <div class="coupon-box">
+
+    <label>Coupon Code</label>
+
+    <div class="coupon-container">
+
+        <input
+            type="text"
+            id="couponCode"
+            placeholder="Enter Coupon Code">
+
+        <button
+            type="button"
+            id="applyCouponBtn">
+            Apply
+        </button>
+
+    </div>
+
+    <p id="couponMessage"></p>
+
+                </div>
+                
+
+                <!-- Price Box -->
+                <div class="price-box">
+                    <h3>Total Price</h3>
+                    <span id="totalPrice">₹0</span>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Place Order
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <section class="faq-section">
+
+    <div class="faq-container">
+
+        <h2 class="faq-title">
+            Frequently Asked Questions
+        </h2>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How long does it take to receive a response?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                Our team usually contacts customers manually on WhatsApp within a few hours after the order is submitted.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I place custom quantity orders?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                Yes, you can choose predefined quantities or select the custom option according to your requirements.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Which languages are supported?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                We support Hindi, English, Hinglish and multiple custom language requests.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How will I be contacted after placing an order?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                Our team will contact you manually using the WhatsApp number provided in your order form.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I modify my order after submission?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                Yes, modifications can usually be discussed when our team contacts you on WhatsApp.
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+
+    <a href="https://wa.me/918840583727"
+   class="floating-whatsapp"
+   target="_blank">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>Chat with us</span>
+
+    </a>
+    
+
+    <script src="script.js"></script>
+
+    <!-- Success Modal -->
+<div class="success-modal" id="successModal">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>Reputation Growth</h2>
+
+        <p class="success-title">
+            Request Submitted Successfully
+        </p>
+
+        <div class="success-details" id="successDetails">
+        </div>
+
+        <button class="close-btn" onclick="closeSuccessModal()">
+            Close
+        </button>
+
+    </div>
+
+</div>
+    
+</body>
+</html>
