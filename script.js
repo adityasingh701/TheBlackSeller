@@ -246,15 +246,33 @@ orderForm.addEventListener("submit", async function (e) {
             }
         );
 
-        document.getElementById(
-            "successDetails"
-        ).innerHTML = `
-            <b>Order ID:</b> ${formData.orderId}<br>
-            <b>Platform:</b> ${platform}<br>
-            <b>Quantity:</b> ${quantity}<br>
-            <b>Wish Type:</b> ${wishType}<br>
-            <b>Total:</b> ${totalPrice}
-        `;
+        const now = new Date();
+
+const orderDate = now.toLocaleDateString("en-IN", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric"
+});
+
+const orderTime = now.toLocaleTimeString("en-IN", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+});
+
+document.getElementById(
+    "successDetails"
+).innerHTML = `
+    <b>🆔Order ID:</b> ${formData.orderId}<br>
+    <b>📅Order Date:</b> ${orderDate}<br>
+    <b>⏰Order Time:</b> ${orderTime}<br>
+    <b>🌐Platform:</b> ${platform}<br>
+    <b>📦Quantity:</b> ${quantity}<br>
+    <b>💬Wish Type:</b> ${wishType}<br>
+    <b>💰Total Amount:</b> ${totalPrice}<br><br>
+
+    Our team will contact you on WhatsApp shortly.
+`;
 
         document.getElementById(
             "successModal"
