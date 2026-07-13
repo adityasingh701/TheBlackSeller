@@ -355,3 +355,27 @@ faqItems.forEach(item => {
 
 });
 
+
+function downloadReceipt(){
+
+    const receipt =
+        document.querySelector(
+            ".success-card"
+        );
+
+    html2canvas(receipt).then(canvas=>{
+
+        const link =
+            document.createElement("a");
+
+        link.download =
+            `${orderIdInput.value}.png`;
+
+        link.href =
+            canvas.toDataURL(
+                "image/png"
+            );
+
+        link.click();
+    });
+}
