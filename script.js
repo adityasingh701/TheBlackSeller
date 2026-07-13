@@ -340,3 +340,40 @@ faqItems.forEach(item => {
 
 });
 
+function downloadReceipt(){
+
+    const receipt =
+        document.getElementById(
+            "receiptCard"
+        );
+
+    const buttons =
+        document.querySelector(
+            ".popup-buttons"
+        );
+
+    buttons.style.display = "none";
+
+    html2canvas(receipt,{
+        scale:2,
+        useCORS:true
+    }).then(canvas=>{
+
+        const link =
+            document.createElement("a");
+
+        link.download =
+            `${orderIdInput.value}.png`;
+
+        link.href =
+            canvas.toDataURL(
+                "image/png"
+            );
+
+        link.click();
+
+        buttons.style.display =
+            "flex";
+    });
+}
+
